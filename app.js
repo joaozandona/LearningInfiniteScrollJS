@@ -16,3 +16,9 @@ function loadImages(numImages = 10){
 }
 
 loadImages();
+
+window.addEventListener('scroll', ()=> {
+  if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
+    loadImages();
+  }
+})
